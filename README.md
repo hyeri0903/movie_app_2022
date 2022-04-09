@@ -1,6 +1,7 @@
 # Movie app 2022
 
 **ReactJS Fundamentals Course (2022 Update!)**
+- 2022.04.09
 - 결과물: https://hyeri0903.github.io/movie_app_2022/
 - 강의 : https://nomadcoders.co/react-for-beginners
 
