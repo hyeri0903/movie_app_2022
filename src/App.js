@@ -8,18 +8,18 @@ class App extends React.Component {
   };
 
   add = () => {
-    console.log('add');
+    this.setState(current => ({ count: current.count + 1 }));
   }
   minus = () => {
-    console.log('minus');
+    this.setState(current => ({ count: current.count - 1 }));
   }
 
   render() {
     return (
       <div>
         <hi>The number is : {this.state.count}</hi><br />
-        <button onClick={this.add()}>Add</button>
-        <button onClick={this.minus()}>Minus</button>
+        <button onClick={this.add}>Add</button>
+        <button onClick={this.minus}>Minus</button>
       </div>
     );
   }
