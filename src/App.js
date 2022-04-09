@@ -1,50 +1,28 @@
 import React from 'react';
 import PropTypes from "prop-types";
+import { render } from '@testing-library/react';
 
-function Food({ name, rating}){
-  console.log(name);
-  return (
-    <div>
-      <h3>I love {name}</h3>
-      <h4>{rating}/5.0</h4>
-    </div>
-     
-  );
-}
+class App extends React.Component {
+  state = {
+    count: 0
+  };
 
-Food.propTypes = {
-  name: PropTypes.string.isRequired,
-  rating: PropTypes.number.isRequired,
-}
-
-const foodILike = [
-  {
-    name: "Kimchi",
-    rating: 1
-  },
-  {
-    name: "Ice-cream",
-    rating: 2
-  },
-  {
-    name: "Chocolate",
-    rating: 3
+  add = () => {
+    console.log('add');
   }
-]
+  minus = () => {
+    console.log('minus');
+  }
 
-function renderFood(dish) {
-  console.log(dish);
-  return <Food name={dish.name} rating={dish.rating} />
-}
-
-
-function App() {
-  return (
-    <div>
-      <h1>Hello</h1>
-      {foodILike.map(renderFood)}
-    </div>
-  );
+  render() {
+    return (
+      <div>
+        <hi>The number is : {this.state.count}</hi><br />
+        <button onClick={this.add()}>Add</button>
+        <button onClick={this.minus()}>Minus</button>
+      </div>
+    );
+  }
 }
 
 export default App;
